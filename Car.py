@@ -10,7 +10,7 @@ class Car(Vehicle):
         average_weight = 1590
         fee = float(5.00)
 
-        if self.weight < average_weight:
+        if self.weight <= average_weight:
             return fee
 
         # Calculate the additional weight
@@ -24,3 +24,4 @@ class Car(Vehicle):
 
     def __repr__(self):
         return "Car=({}, {}, {})".format(self.vehicle_type, self.reg_num, self.weight)
+
