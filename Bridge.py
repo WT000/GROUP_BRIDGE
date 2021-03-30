@@ -35,6 +35,8 @@ class Bridge:
                 return True
         return False
 
+    def __repr__(self):
+        return "Bridge=(vehicles={})".format(self.vehicles)
 
 if __name__ == '__main__':
     bridges = Bridge()
@@ -42,6 +44,3 @@ if __name__ == '__main__':
 
     bridges.add_vehicle(motorbike1)
     print(bridges)
-
-
-
