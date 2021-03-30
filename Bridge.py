@@ -3,7 +3,7 @@ from Motorbike import Motorbike
 from Lorry import Lorry
 
 
-class Bridge():
+class Bridge:
     def __init__(self):
         self.vehicles = []
 
@@ -25,18 +25,6 @@ class Bridge():
                 return True
         return False
 
-<<<<<<< HEAD
-    def remove_car(self):
-        pass
-
-
-if __name__ == '__main__':
-    bridges = Bridge()
-    motorbike1 = Motorbike("motorbike1", 5050, 1250)
-
-    bridges.add_vehicle(motorbike1)
-    print(bridges)
-=======
     def remove_car(self, reg_to_find):
         if len(self.vehicles) == 0:
             return False
@@ -46,4 +34,14 @@ if __name__ == '__main__':
                 self.vehicles.remove(vehicle)
                 return True
         return False
->>>>>>> 07538be64f435e7aa9a62b9243287fdf23e239b6
+
+
+if __name__ == '__main__':
+    bridges = Bridge()
+    motorbike1 = Motorbike("motorbike1", 5050, 1250)
+
+    bridges.add_vehicle(motorbike1)
+    print(bridges)
+
+
+
