@@ -17,10 +17,13 @@ class Car(Vehicle):
         additional_weight = (self.weight - average_weight)
 
         # Get how many times it's exceeded 100kg
-        every_100 = additional_weight / 100
+        fee_to_add = additional_weight / 100
 
         # Return the fee + 0.10 for every 100kg
-        return fee + (every_100 * 0.10)
+        return fee + (0.10 * round(fee_to_add))
 
     def __repr__(self):
         return "Car=({}, {}, {})".format(self.vehicle_type, self.reg_num, self.weight)
+
+car = Car("test", 1650)
+car.calculateFee()
