@@ -25,6 +25,7 @@ class Bridge():
                 return True
         return False
 
+<<<<<<< HEAD
     def remove_car(self):
         pass
 
@@ -35,3 +36,14 @@ if __name__ == '__main__':
 
     bridges.add_vehicle(motorbike1)
     print(bridges)
+=======
+    def remove_car(self, reg_to_find):
+        if len(self.vehicles) == 0:
+            return False
+
+        for vehicle in self.vehicles:
+            if vehicle.reg_num == reg_to_find:
+                self.vehicles.remove(vehicle)
+                return True
+        return False
+>>>>>>> 07538be64f435e7aa9a62b9243287fdf23e239b6
