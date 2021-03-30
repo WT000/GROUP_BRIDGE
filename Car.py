@@ -13,14 +13,14 @@ class Car(Vehicle):
         if self.weight < average_weight:
             return fee
 
-        # if the car weight is greater than 1590, add 10p per 100kg excess
-        while average_weight < self.weight:
-            fee += 0.1
-            average_weight += 100
+        # Calculate the additional weight
+        additional_weight = (self.weight - average_weight)
 
-        fee = "%.1f" % fee
+        # Get how many times it's exceeded 100kg
+        every_100 = additional_weight / 100
 
-        return float(fee)
+        # Return the fee + 0.10 for every 100kg
+        return fee + (every_100 * 0.10)
 
     def __repr__(self):
         return "Car=({}, {}, {})".format(self.vehicle_type, self.reg_num, self.weight)
