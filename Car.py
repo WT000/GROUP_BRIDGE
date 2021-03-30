@@ -20,10 +20,7 @@ class Car(Vehicle):
         fee_to_add = additional_weight / 100
 
         # Return the fee + 0.10 for every 100kg
-        return fee + (0.10 * round(fee_to_add))
+        return fee + (0.10 * int(fee_to_add))
 
     def __repr__(self):
         return "Car=({}, {}, {})".format(self.vehicle_type, self.reg_num, self.weight)
-
-car = Car("test", 1650)
-car.calculateFee()
