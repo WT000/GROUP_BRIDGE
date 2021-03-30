@@ -1,24 +1,30 @@
 # Import the vehicle classes
+from Motorbike import Motorbike
+from Lorry import Lorry
 
 class Bridge():
     def __init__(self):
         self.vehicles = []
 
     def calc_total_weight(self):
-        pass
         # Go through each vehicle in the list and add its weight onto the total
-        #total_weight = 0
+        total_weight = 0
 
-        #for vehicle in self.vehicles:
-            #total_weight += vehicle.weight
+        # Add the total weights
+        for vehicle in self.vehicles:
+            total_weight += vehicle.weight
 
-        #if total_weight >= 30000:
-            #return False
-        #else:
-            #return True
+        # If on or above 30k kg, return False (don't add), else return True (fine to add)
+        if total_weight >= 30000:
+            return False
+        else:
+            return True
 
-    def add_vehicle(self):
-        pass
+    def add_vehicle(self, vehicle_to_add):
+        if len(self.vehicles) <= 20:
+            self.vehicles.append(vehicle_to_add)
+            return True
+        return False
 
     def remove_car(self):
         pass
