@@ -1,6 +1,7 @@
 # Import the vehicle classes
 from Motorbike import Motorbike
 from Lorry import Lorry
+from Car import Car
 
 
 class Bridge:
