@@ -19,3 +19,6 @@ class Car(Vehicle):
         fee = "%.1f" % fee
 
         return float(fee)
+
+    def __repr__(self):
+        return "Car=({}, {}, {})".format(self.vehicle_type, self.reg_num, self.weight)

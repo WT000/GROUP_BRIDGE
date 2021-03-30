@@ -11,3 +11,6 @@ class Vehicle(ABC):
     @abstractmethod
     def calculateFee(self):
         pass
+
+    def __repr__(self):
+        return "Vehicle=({}, {}, {})".format(self.vehicle_type, self.reg_num, self.weight)
