@@ -18,10 +18,10 @@ class Bridge():
         if total_weight >= 30000:
             return False
         else:
-            return True
+            return total_weight, True
 
     def add_vehicle(self, vehicle_to_add):
-        if len(self.vehicles) <= 20:
+        if len(self.vehicles) <= 20 and vehicle_to_add.weight:
             self.vehicles.append(vehicle_to_add)
             return True
         return False
