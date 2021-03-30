@@ -1,6 +1,5 @@
 from Vehicle import Vehicle
 
-
 class Car(Vehicle):
     def __init__(self, reg_num, weight):
         super().__init__("Car", reg_num, weight)
@@ -14,12 +13,9 @@ class Car(Vehicle):
 
         # if the car weight is greater than 1590, add 10p per 100kg excess
         while average_weight < self.weight:
-            fee += 0.10
+            fee += 0.1
             average_weight += 100
 
-        return fee
+        fee = "%.1f" % fee
 
-
-if __name__ == "__main__":
-    car = Car("Car", 1890)
-    print(car.calculateFee())
+        return float(fee)
