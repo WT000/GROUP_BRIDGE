@@ -5,6 +5,7 @@ from Car import Car
 
 
 class Bridge:
+
     def __init__(self):
         self.vehicles = []
 

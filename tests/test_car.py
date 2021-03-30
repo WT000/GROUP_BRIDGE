@@ -1,7 +1,9 @@
 import pytest
 from Car import Car
 
+
 class TestCar:
+
     def testCarExist(self, car):
         assert isinstance(car, Car)
 

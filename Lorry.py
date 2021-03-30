@@ -1,6 +1,8 @@
 from Vehicle import Vehicle
 
+
 class Lorry(Vehicle):
+
     def __init__(self, reg_num, weight):
         super().__init__("Lorry", reg_num, weight)
 
