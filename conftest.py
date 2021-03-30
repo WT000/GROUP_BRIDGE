@@ -17,7 +17,7 @@ def lorry():
 
 @pytest.fixture
 def car():
-    yield Car("A6423KM", 1234, "Car")
+    yield Car("A6423KM", 1234)
 
 
 @pytest.fixture
