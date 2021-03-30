@@ -10,4 +10,4 @@ class TestCar:
 
     def testCarFat(self,car):
         car.weight = 1690
-        assert car.calculateFee() == None
+        assert car.calculateFee() == 5.1
