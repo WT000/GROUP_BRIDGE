@@ -38,6 +38,7 @@ class Bridge:
     def __repr__(self):
         return "Bridge=(vehicles={})".format(self.vehicles)
 
+
 if __name__ == '__main__':
     bridges = Bridge()
     motorbike1 = Motorbike("motorbike1", 5050, 1250)
