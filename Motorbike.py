@@ -1,8 +1,9 @@
 from Vehicle import Vehicle
 
+
 class Motorbike(Vehicle):
 
-    def __init__(self, type, reg_num, weight):
+    def __init__(self, vehicle_type, reg_num, weight):
         pass
 
     def calculateFee(self):
