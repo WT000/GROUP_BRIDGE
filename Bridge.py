@@ -26,5 +26,9 @@ class Bridge():
             return True
         return False
 
-    def remove_car(self):
-        pass
+    def remove_car(self, reg_to_find):
+        for vehicle in self.vehicles:
+            if vehicle.reg_num == reg_to_find:
+                self.vehicles.remove(vehicle)
+                return True
+        return False
