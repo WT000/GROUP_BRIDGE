@@ -1,2 +1,2 @@
 # GROUP_BRIDGE
-THIS WILL GO WELL
+Group work for Continuous Integration and Delivery.
