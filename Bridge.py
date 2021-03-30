@@ -2,6 +2,7 @@
 from Motorbike import Motorbike
 from Lorry import Lorry
 
+
 class Bridge():
     def __init__(self):
         self.vehicles = []
@@ -15,16 +16,22 @@ class Bridge():
             total_weight += vehicle.weight
 
         # If on or above 30k kg, return False (don't add), else return True (fine to add)
-        if total_weight >= 30000:
-            return False
-        else:
-            return total_weight, True
+        return total_weight
 
     def add_vehicle(self, vehicle_to_add):
-        if len(self.vehicles) <= 20 and vehicle_to_add.weight:
-            self.vehicles.append(vehicle_to_add)
-            return True
+        if len(self.vehicles) <= 20:
+            if self.calc_total_weight() + vehicle_to_add.weight <= 30000:
+                self.vehicles.append(vehicle_to_add)
+                return True
         return False
 
     def remove_car(self):
         pass
+
+
+if __name__ == '__main__':
+    bridges = Bridge()
+    motorbike1 = Motorbike("motorbike1", 5050, 1250)
+
+    bridges.add_vehicle(motorbike1)
+    print(bridges)
