@@ -1,5 +1,4 @@
 import pytest
-from Vehicle import Vehicle
 from Motorbike import Motorbike
 from Lorry import Lorry
 
