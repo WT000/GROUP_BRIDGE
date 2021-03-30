@@ -25,19 +25,19 @@ class TestBridgeHappy:
         assert len(bridge.vehicles) == 20
 
     def test_max_weight_limit_of_the_bridge(self, bridge):
-        car = Car(5253, 29999)
+        car = Car("5253", 29999)
         bridge.add_vehicle(car)
         assert bridge.calc_total_weight() == 29999
 
     def test_max_weight_limit_of_the_bridge_2_actual_vehicle_added(self, bridge):
-        car = Car(5253, 29999)
+        car = Car("5253", 29999)
         bridge.add_vehicle(car)
         assert bridge.vehicles[0] == car
 
     def test_remove_car(self, bridge, car, default_motorbike):
         bridge.add_vehicle(car)
         bridge.add_vehicle(default_motorbike)
-        bridge.remove_car(5050)
+        bridge.remove_car("5050")
         assert len(bridge.vehicles) == 1
 
 

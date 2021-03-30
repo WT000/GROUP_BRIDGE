@@ -8,7 +8,7 @@ class TestMotorbikeHappy:
         assert default_motorbike.vehicle_type == "Motorbike"
 
     def test_creation_of_motorbike_reg_number(self, default_motorbike):
-        assert default_motorbike.reg_num == 5050
+        assert default_motorbike.reg_num == "5050"
 
     def test_creation_of_motorbike_weight(self, default_motorbike):
         assert default_motorbike.weight == 150

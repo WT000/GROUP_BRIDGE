@@ -7,7 +7,7 @@ from Bridge import Bridge
 
 @pytest.fixture
 def default_motorbike():
-    yield Motorbike("Motorbike", 5050, 150)
+    yield Motorbike("5050", 150)
 
 
 @pytest.fixture

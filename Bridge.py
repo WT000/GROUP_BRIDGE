@@ -42,7 +42,7 @@ class Bridge:
 
 if __name__ == '__main__':
     bridges = Bridge()
-    motorbike1 = Motorbike("motorbike1", 5050, 1250)
+    motorbike1 = Motorbike("5050", 1250)
 
     bridges.add_vehicle(motorbike1)
     print(bridges)
