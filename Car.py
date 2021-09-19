@@ -17,7 +17,7 @@ class Car(Vehicle):
         additional_weight = (self.weight - average_weight)
 
         # Get how many times it's exceeded 100kg
-        fee_to_add = additional_weight / 100
+        fee_to_add = additional_weight // 100
 
         # Return the fee + 0.10 for every 100kg
         return fee + (0.10 * int(fee_to_add))
