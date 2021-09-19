@@ -24,4 +24,4 @@ class TestCar:
         
     def testCarSecondOverweight(self, car):
         car.weight = 1790
-        assert car.CalculateFee() == 5.2
+        assert car.calculateFee() == 5.2
